@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="sidebar">
+            <a href="/login">Zaloguj się</a>
+            <a href="/register">Zarejestruj się</a>
+        </div>
+        <div id="rightbar">
+            <form method="post" action="/login">
+                <div>
+                    <label>Nazwa użytkownika</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <label>Hasło</label>
+                    <input type="password" name="password">
+                </div>
+                <div>
+                    <input type="submit" value="Zaloguj się">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

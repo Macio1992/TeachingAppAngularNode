@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zarejestruj się</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="sidebar">
+            <a href="/login">Zaloguj się</a>
+            <a href="/register">Zarejestruj się</a>
+        </div>
+        <div id="rightbar" ng-app="formApp" ng-controller="formController">
+            <form method="post" action="/register" name="messageAnimationForm" novalidate>
+
+                <div>
+                    <label>Nazwa użytkownika</label>
+                    <input ng-model="user.usernameField" id="username" type="text" name="username" required ng-minlength="5" ng-maxlength="10">
+                    
+                    <div ng-messages="messageAnimationForm.username.$error" ng-messages-multiple class="angMessages">
+                        <div ng-message="required">Nazwa użytkownika jest wymagana!</div>
+                        <div ng-message="minlength">Nazwa użytkownika musi mieć co najmniej 5 znaków</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Email</label>
+                    <input ng-model="user.emailField" id="email" type="email" name="email" required>
+                    <div ng-messages="messageAnimationForm.email.$error" ng-messages-multiple class="angMessages">
+                        <div ng-message="required">Email jest wymagany!</div>
+                        <div ng-message="email">To pole musi być poprawnym adresem email!</div>
+                        
+                    </div>
+                </div>
+                <!--<div class="info"></div>
+                <div>
+                    <label>Imię</label>
+                    <input type="text" name="firstName">
+                </div>
+                <div>
+                    <label>Nazwisko</label>
+                    <input type="text" name="lastName">
+                </div>
+                <div>
+                    <label>Hasło</label>
+                    <input type="password" name="password">
+                </div>-->
+                <div>
+                    <input type="submit" value="Zarejestruj się">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--<script src="/jquery/dist/jquery.min.js"></script>-->
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular-messages/angular-messages.min.js"></script>
+    <script src="/angular-animate/angular-animate.min.js"></script>
+    <script src="/js/form.js"></script>
+    <script>
+        /*$(document).ready(function(){
+            $('input[type=submit]').css('display', 'none');
+            $('#username').on('keyup', function(){
+                var thisInput = $(this);
+                $.ajax({
+                    url: 'http://localhost:3000/users/checkifexists/' + $(this).val(),
+                    type: 'GET'
+                }).then(function(data){
+                    if(data.success){
+                        thisInput.parent().next('div.info').empty();
+                        thisInput.parent().next('div.info').css('display', 'block');
+                        thisInput.parent().next('div.info').append('<p>Użytkownik istnieje. Wybierz inną nazwę</p>');
+                        $('input[type=submit]').css('display', 'none');
+                    } else {
+                        $('input[type=submit]').css('display', 'block');
+                        thisInput.parent().next('div.info').css('display', 'none');
+                    }
+                });
+            });
+            $('#email').on('keyup', function(){
+                var input = $(this);
+                var pattern = /^[a-zA-Z!#$%&'*+/=?^{|}~]([a-zA-Z0-9!#$&%'*+\-/=?^_{|}~]+([.]|[a-zA-Z0-9!#$&%'*+\-/=?^_{|}~]*))+@[a-zA-Z0-9]+\.[a-zA-Z]{2}$/;
+                if(!pattern.test(input.val())){
+                    input.parent().next('div.info').css('display', 'block');
+                    input.parent().next('div.info').empty();
+
+                    input.parent().next('div.info').append('<p>Email jest niepoprawnie wprowadzony.</p>');
+                    $('input[type=submit]').css('display', 'none');
+                } else {
+                    $('input[type=submit]').css('display', 'block');
+                    input.parent().next('div.info').css('display', 'none');
+                }
+            });
+        });*/
+    </script>
+        
+</body>
+</html>

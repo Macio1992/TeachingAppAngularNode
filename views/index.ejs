@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal do nauki angielskiego</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="sidebar">
+            <% if(user){ %>
+                <p>Username:
+                    <span>
+                        <%= user.username %>
+                    </span>
+                </p>
+                <a href="/logout">Wyloguj się</a>
+            <% } else { %>
+                <a href="/login">Zaloguj się</a>
+                <a href="/register">Zarejestruj się</a>
+            <% } %>
+        </div>
+        <div id="rightbar">Rightbar</div>
+    </div>
+
+        
+</body>
+</html>

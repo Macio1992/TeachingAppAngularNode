@@ -1,0 +1,148 @@
+body {
+    margin:0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#main{
+    overflow: hidden;
+    #sidebar{
+        width: 25%;
+        float: left;
+        padding-top: 2%;
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            width: 100%;
+            padding-left: 5%;
+            padding-bottom: 3%;
+            font-size: 20px;
+        }
+        p{
+            margin: 0;
+            padding-left: 2%;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    #rightbar{
+        width: 75%;
+        float: right;
+        padding-top: 2%;
+        form {
+            width: 40%;
+            div{
+                padding: 3% 0;
+                overflow: hidden;
+                label {
+                    font-size: 18px;
+                    float: left;
+                }
+                input[type=text], input[type=email], input[type=password]{
+                    padding: 2% 0;
+                    float: right;
+                    border-radius: 1px;
+                    border: 1px solid lightgray;
+                }
+                input[type=submit]{
+                    border: 0;
+                    padding: 2%;
+                    background: lightblue;
+                    color: white;
+                    cursor: pointer;
+                    outline: 0;
+                    float: right;
+                }
+            }
+            div.info {
+                clear: both;
+                
+            }
+            div.angMessages{
+                clear: both;
+                div{
+                    text-align: right;
+                    color: darkorange;
+                }
+            }
+            
+        }
+    }
+}
+
+.ng-active .ng-scope { 
+            -webkit-animation: enter 800ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            animation: enter 800ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            display: block;
+            position: relative;
+        } 
+        @-webkit-keyframes enter {
+            from {
+                opacity: 0;
+                height: 0px;
+                left: -70px;
+            }
+            75% {
+                left: 15px;
+            }
+            to {
+                opacity: 1;
+                height: 30px;
+                left: 0px;
+            }
+        }
+        @keyframes enter {
+            from {
+                opacity: 0;
+                height: 0px;
+                left: -70px;
+            }
+            75% {
+                left: 15px;
+            }
+            to {
+                opacity: 1;
+                height: 30px;
+                left: 0px;
+            }
+        }
+
+        .ng-inactive { 
+            -webkit-animation: leave 800ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            animation: leave 800ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            display: block;
+            position: relative;
+        } 
+        @-webkit-keyframes leave {
+            to {
+                opacity: 0;
+                height: 0px;
+                left: -70px;
+            }
+            25% {
+                left: 15px;
+            }
+            from {
+                opacity: 1;
+                height: 30px;
+                left: 0px;
+            }
+        }
+        @keyframes leave {
+            to {
+                opacity: 0;
+                height: 0px;
+                left: -70px;
+            }
+            25% {
+                left: 15px;
+            }
+            from {
+                opacity: 1;
+                height: 30px;
+                left: 0px;
+            }
+        }
